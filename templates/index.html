@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <title>Say Hello</title>
+</head>
+<body>
+    <form action="greet" method="post">
+        <img src="https://github.com/MariyaSha/SimpleGreetingApp/blob/main/logo.png?raw=true" >
+        {% for message in get_flashed_messages() %}
+            <p>{{message}}</p>
+        {% endfor %}
+        <br>
+        <input type="text" name="name_input">
+        <br>
+        <input type="submit" value="GREET" id="greet">
+    </form>
+</body>
+</html>
